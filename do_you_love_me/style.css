@@ -1,0 +1,239 @@
+:root {
+    --primary: #ff4d6d;
+    --secondary: #ff758f;
+    --dark: #590d22;
+    --light: #fff0f3;
+    --bg-gradient: linear-gradient(135deg, #ffb3c1, #ff8fa3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: #fff0f3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 10;
+    transition: all 0.5s ease;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.heart-gif {
+    max-width: 280px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.question {
+    color: var(--dark);
+    font-size: 2.5rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 100;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    outline: none;
+}
+
+.yes {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yes:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.no {
+    background-color: #e9ecef;
+    color: #495057;
+    position: relative;
+}
+
+.no:hover {
+    background-color: #dee2e6;
+}
+
+.success-message {
+    display: none;
+    font-size: 3rem;
+    color: var(--dark);
+    font-weight: 700;
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loader-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dot-1 {
+    left: 0;
+    animation: jump 0.5s ease-in-out forwards, merge1 0.4s ease-in-out 1.5s forwards;
+}
+
+.dot-2 {
+    left: 32px;
+    animation: jump 0.5s ease-in-out 0.5s forwards, hideDot2 0.3s ease-in-out 1.9s forwards;
+}
+
+.dot-3 {
+    left: 64px;
+    animation: jump 0.5s ease-in-out 1s forwards, merge3 0.4s ease-in-out 1.5s forwards;
+}
+
+.loader-heart {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    width: 24px;
+    color: var(--primary);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    animation: showHeart 1.3s ease-in-out 1.9s forwards;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 24px));
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes merge1 {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        left: 32px;
+        opacity: 0;
+    }
+}
+
+@keyframes merge3 {
+    0% {
+        left: 64px;
+        opacity: 1;
+    }
+
+    100% {
+        left: 32px;
+        opacity: 0;
+    }
+}
+
+@keyframes hideDot2 {
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes showHeart {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 1;
+    }
+
+    40% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(60);
+        opacity: 0;
+    }
+}
