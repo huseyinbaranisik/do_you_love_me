@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://huseyinbaranisik.github.io/do_you_love_me/"><b>Open the live page</b></a> &nbsp;·&nbsp;
   <a href="#demo">Demo</a> &nbsp;·&nbsp;
   <a href="#what-it-does">What it does</a> &nbsp;·&nbsp;
   <a href="#how-it-works">How it works</a> &nbsp;·&nbsp;
@@ -15,6 +16,8 @@
 question with two buttons. "Hayır" (No) does not really work: every click makes it jump away and makes "Evet"
 (Yes) bigger, until Yes fills the screen. Pressing Yes plays a short heart animation and shows the answer.
 It is plain HTML, CSS and JavaScript, with no build step and no libraries.
+
+**Live:** <https://huseyinbaranisik.github.io/do_you_love_me/>
 
 <br>
 
@@ -78,8 +81,11 @@ The colours are the CSS variables in `style.css`: `--primary #ff4d6d`, `--second
 
 ## Run it
 
-No installation. Open `do_you_love_me/index.html` in a browser. Or serve the folder, which some browsers prefer
-for audio:
+The easiest way is the live page: <https://huseyinbaranisik.github.io/do_you_love_me/>. It is published from the
+`do_you_love_me/` folder by [`.github/workflows/pages.yml`](.github/workflows/pages.yml) on every push to `main`.
+
+To run it locally there is nothing to install. Open `do_you_love_me/index.html` in a browser, or serve the folder,
+which some browsers prefer for audio:
 
 ```bash
 cd do_you_love_me
@@ -92,8 +98,6 @@ Then open `http://localhost:8000`.
 
 ## Known limits
 
-- **Not online yet.** The repository has no GitHub Pages site, so the page has to be opened from a copy. Turning on
-  Pages for the `do_you_love_me/` folder would give it a link to share.
 - **Turkish only.** All texts on the page are Turkish.
 - **The music is a commercial song.** `I_wanna_bu_yours.mp3` is in the public repository; make sure you have the
   right to share it.
@@ -118,6 +122,8 @@ Then open `http://localhost:8000`.
 bir soru sorar. "Hayır" aslında işe yaramaz: her tıklamada kaçar ve "Evet"i büyütür, sonunda Evet bütün ekranı
 kaplar. Evet'e basınca kısa bir kalp animasyonu oynar ve cevap ekranı gelir. Düz HTML, CSS ve JavaScript ile
 yazılmıştır; derleme adımı ya da kütüphane yoktur.
+
+**Canlı:** <https://huseyinbaranisik.github.io/do_you_love_me/>
 
 ### Demo
 
@@ -145,8 +151,11 @@ Fonts'tan Outfit.
 
 ### Çalıştırma
 
-Kurulum yok. `do_you_love_me/index.html` dosyasını bir tarayıcıda aç. Ya da klasörü bir sunucuyla aç; bazı
-tarayıcılar ses için bunu tercih eder:
+En kolayı canlı sayfa: <https://huseyinbaranisik.github.io/do_you_love_me/>. Sayfa, `main`'e her push'ta
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml) ile `do_you_love_me/` klasöründen yayınlanır.
+
+Yerelde çalıştırmak için kurulum gerekmez. `do_you_love_me/index.html` dosyasını bir tarayıcıda aç ya da klasörü
+bir sunucuyla aç; bazı tarayıcılar ses için bunu tercih eder:
 
 ```bash
 cd do_you_love_me
@@ -157,8 +166,6 @@ Sonra `http://localhost:8000` adresini aç.
 
 ### Bilinen kısıtlar
 
-- **Henüz yayında değil.** Repoda GitHub Pages sitesi yok; sayfa ancak bir kopyadan açılabiliyor. `do_you_love_me/`
-  klasörü için Pages açılırsa paylaşılabilir bir linki olur.
 - **Yalnızca Türkçe.** Sayfadaki bütün yazılar Türkçe.
 - **Müzik ticari bir şarkı.** `I_wanna_bu_yours.mp3` herkese açık repoda duruyor; paylaşma hakkın olduğundan emin ol.
 - **Geri dönüş yok.** Cevap ekranından sonra sıfırlama yok; baştan başlamak için sayfayı yenile.
